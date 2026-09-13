@@ -1,0 +1,48 @@
+# PYTHON CACHE
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PYTHON VIRTUAL ENVIRONMENTS
+.venv/
+venv/
+env/
+
+# ENVIRONMENT VARIABLES AND SECRETS
+.env
+.env.*
+!.env.example
+
+# PYTHON BUILD FILES
+build/
+dist/
+*.egg-info/
+
+# UV / PYTHON CACHE
+.python-version
+
+# NODE DEPENDENCIES
+node_modules/
+
+# FRONTEND BUILD FILES
+frontend/dist/
+frontend/.vite/
+
+# LOG FILES
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# EDITORS
+.vscode/
+.idea/
+
+# OPERATING SYSTEM FILES
+.DS_Store
+Thumbs.db
+
+# Local application data
+*.db
+*.db-shm
+*.db-wal

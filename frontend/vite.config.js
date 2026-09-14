@@ -9,7 +9,7 @@ export default defineConfig({
     manifest: {
       name: 'DailyRandomz', short_name: 'Randomz',
       description: 'A daily dose of unexpected. Discover random facts and keep your favorites.',
-      theme_color: '#284b39', background_color: '#f7f8f2',
+      theme_color: '#ffffff', background_color: '#ffffff',
       display: 'standalone', start_url: '/', scope: '/',
       icons: [192, 512].map(size => ({ src: `/icon-${size}.png`, sizes: `${size}x${size}`, type: 'image/png', purpose: 'any maskable' })),
     },

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import ThemePicker from './ThemePicker.jsx'
 
 async function api(path, method = 'GET', body) {
   const response = await fetch(`/api${path}`, {
@@ -104,6 +105,7 @@ export default function App() {
           <button disabled={busy} className={page === 'discover' ? 'active' : ''} onClick={() => navigate('discover')}>Discover</button>
           {user && <><button disabled={busy} className={page === 'favorites' ? 'active' : ''} onClick={() => navigate('favorites')}>Favorites</button><button disabled={busy} className={page === 'settings' ? 'active' : ''} onClick={() => navigate('settings')}>Settings</button></>}
           {!user && <button className="sign-in" disabled={busy} onClick={() => setAuth('login')}>Sign in <span aria-hidden="true">↗</span></button>}
+          <ThemePicker />
         </nav>
       </header>
       <main>

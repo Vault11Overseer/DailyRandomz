@@ -1,34 +1,38 @@
+<!-- INDEX -->
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#ffffff" />
-    <script>
-      // Apply the saved theme before the page paints, including on offline reloads.
-      (() => {
-        let preference = 'system'
-        try {
-          const saved = localStorage.getItem('randomz-theme')
-          if (saved === 'light' || saved === 'dark') preference = saved
-        } catch { /* Storage is optional. */ }
-        const theme = preference === 'system'
-          ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-          : preference
-        document.documentElement.dataset.themePreference = preference
-        document.documentElement.dataset.theme = theme
-        document.documentElement.style.colorScheme = theme
-        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#080808' : '#ffffff'
-      })()
-    </script>
-    <meta name="description" content="A daily dose of unexpected. Discover random facts and save your favorites." />
-    <link rel="apple-touch-icon" href="/icon-192.png" />
-    <title>DailyRandomz — A little curiosity, every day</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" />
+  <script>
+    // Apply the saved theme before the page paints, including on offline reloads.
+    (() => {
+      let preference = 'system'
+      try {
+        const saved = localStorage.getItem('randomz-theme')
+        if (saved === 'light' || saved === 'dark') preference = saved
+      } catch { /* Storage is optional. */ }
+      const theme = preference === 'system'
+        ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        : preference
+      document.documentElement.dataset.themePreference = preference
+      document.documentElement.dataset.theme = theme
+      document.documentElement.style.colorScheme = theme
+      document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#080808' : '#ffffff'
+    })()
+  </script>
+  <meta name="description" content="A daily dose of unexpected. Discover random facts and save your favorites." />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <title>DailyRandomz — A little curiosity, every day</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
